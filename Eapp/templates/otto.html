@@ -125,6 +125,8 @@
         }
 
         
+
+
         
         .pdf-container {
     position: relative;
@@ -178,7 +180,11 @@
     background: #e64a19;
 }
 
-
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
 
     </style>
 </head>
@@ -232,7 +238,8 @@
         
                 <!-- Blur Overlay with Lock Icon -->
                 <div class="blur-overlay" id="blurOverlay">
-                    <p class="locked-text">Unlock Full Guide</p>
+                    <p class="locked-text">🔒 Content Locked!</p>
+                    <p>To access this section, simply buy our robotic kit and unlock advanced details!</p>
                     <button class="unlock-btn" onclick="unlockPDF()">Unlock</button>
                 </div>
             </div>
@@ -251,7 +258,8 @@
         
                 <!-- Blur Overlay with Lock Icon -->
                 <div class="blur-overlay" id="blurOverlay2">
-                    <p class="locked-text">Unlock Full Report</p>
+                    <p class="locked-text">🔒 Content Locked!</p>
+                    <p>To access this section, simply buy our robotic kit and unlock advanced details!</p>
                     <button class="unlock-btn" onclick="unlockReport()">Unlock</button>
                 </div>
             </div>
@@ -261,8 +269,20 @@
         <!-- Otto Interface Diagram Section -->
         <section class="content-box">
             <h2 class="section-title">Otto Interface Diagram</h2>
-            <img src="{% static 'images/OTTO Interfacing Diagram.jpeg' %}" style="max-width: 100%; height: auto; align-items: center;">
+        
+            <div class="image-container">
+                <!-- Image Display -->
+                <img src="{% static 'images/OTTO Interfacing Diagram.jpeg' %}" id="ottoImage" 
+                     style="max-width: 100%; height: auto; align-items: center;">
+        
+                <!-- Blur Overlay with Lock Icon -->
+                <div class="blur-overlay" id="blurOverlay3">
+                    <p class="locked-text">🔒 Content Locked!</p>
+                    <p>To access this section, simply buy our robotic kit and unlock advanced details!</p>                    <button class="unlock-btn" onclick="unlockImage()">Unlock</button>
+                </div>
+            </div>
         </section>
+        
 
         <!-- 3D Model Viewer Section -->
         <section class="content-box">
@@ -352,6 +372,10 @@
 
 function unlockReport() {
     document.getElementById("blurOverlay2").style.display = "none"; // Hide blur & lock
+}
+
+function unlockImage() {
+    document.getElementById("blurOverlay3").style.display = "none"; // Hide blur & lock
 }
 
 
