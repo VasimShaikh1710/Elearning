@@ -91,13 +91,16 @@
                 <div class="grid grid-cols-1 md:grid-cols-[300px_300px_300px] lg:grid-cols-[300px_300px_300px] gap-2">
                     <!-- Project 1 -->
                 <div class="project-card bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg overflow-hidden">
+                    <a href="{% url 'otto' %}">
                     <img src="{% static 'images/Otto.png' %}" alt="Project 1" class="w-full object-cover">
+                    </a>
                     <div class="p-4">
                         <h3 class="text-white font-medium mb-2"> Otto </h3>
                         <p class="text-gray-400 text-sm">Autonomous robot for industrial applications</p>
                         <div class="mt-4 flex justify-between items-center">
                             <span class="text-blue-400">$$$</span>
                             <button onclick="location.href='/otto'" class="!rounded-button bg-custom px-4 py-2 text-white hover:bg-blue-700 transition text-sm">Explore</button>
+                
                         </div>
                     </div>
                 </div>
