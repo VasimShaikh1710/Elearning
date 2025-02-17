@@ -242,6 +242,64 @@
                     <li>🤖  <strong>Great for Learning:</strong> Perfect for kids, beginners, and students to explore STEM (Science, Technology, Engineering, and Math) in a fun way!</li>
                 </ul>
                 </div>
+                <div class="tab-container">
+    
+    
+</div>
+<title>Creative Buy Now Button</title>
+    <style>
+        .buy-button {
+            display: inline-block;
+            padding: 25px 90px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg,rgb(0, 20, 90),rgb(0, 90, 106));
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 126, 95, 0.5);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .buy-button:hover {
+            background: linear-gradient(90deg,rgb(10, 28, 75),rgb(0, 111, 171));
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Glowing Animation */
+        .buy-button::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(rectangle, rgba(35, 14, 139, 0.2) 10%, transparent 80%);
+            transform: rotate(25deg);
+            transition: all 0.5s;
+        }
+
+        .buy-button:hover::before {
+            top: -30%;
+            left: -30%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Buy Now Button -->
+    <a href="https://www.phntechnology.com/" target="_blank" class="buy-button">
+        Buy Now 🚀
+    </a>
+
+
+
+
         </section>
         <!-- Left Ad Placement -->
         <div class="ad-placement ad-left">Ad Placement</div>
@@ -255,7 +313,7 @@
             <div class="video-container">
                 <iframe id="videoIframe" src="https://drive.google.com/file/d/17qe7c9zbNkcvHWnQPXCcB179ZeqUeUDg/preview" 
                         width="100%" height="400" allow="autoplay" id="videoPlayer"></iframe>
-        
+
                 <!-- Blur Overlay with Lock Icon -->
                 <div class="blur-overlay" id="blurOverlay4">
                     <p class="locked-text">Unlock Full Video</p>
