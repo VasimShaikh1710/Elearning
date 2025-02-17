@@ -20,3 +20,4 @@ def profile(request):
 def cart(request): 
     return render(request, 'cart.html')
 
+
