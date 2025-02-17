@@ -15,6 +15,7 @@
     box-shadow: 0 0 15px rgba(66,153,225,0.3);
     transform: translateY(-2px);
     transition: all 0.3s ease;
+    
 }
 .search-bar {
     background: rgba(255,255,255,0.1);
@@ -25,8 +26,33 @@
     50% { box-shadow: 0 0 20px rgba(66,153,225,0.8); }
     100% { box-shadow: 0 0 5px rgba(66,153,225,0.5); }
 }
+
 html {
 scroll-behavior: smooth;
+}
+.ad-placement {
+    position: fixed;
+    width: 15vw;
+    height: 60vh;
+    background-color: rgba(31, 41, 55, 0.9);
+    backdrop-filter: blur(10px);
+    border: 2px solid #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    transition: transform 0.2s ease-out;
+}
+
+.ad-left {
+    left: 0;  /* Stick to the left */
+    top: 300%;
+}
+
+.ad-right {
+    right: 0; /* Stick to the right */
+    top: 300%;
 }
 
 </style>
@@ -34,6 +60,7 @@ scroll-behavior: smooth;
 <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
 </head>
 <body class="bg-gray-900 font-[&#39;Space_Grotesk&#39;] text-gray-100 circuit-bg min-h-screen">
+    
 <nav class="bg-gray-800/95 backdrop-blur-sm border-b border-blue-500/20 sticky top-0 z-50">
 <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
@@ -55,6 +82,12 @@ scroll-behavior: smooth;
                 </div>
             </div>
         </nav>
+        <!-- Left Ad Placement -->
+        <div class="ad-placement ad-left">Ad Placement</div>
+
+        <!-- Right Ad Placement -->
+        <div class="ad-placement ad-right">Ad Placement</div>
+
         </div>
     </div>
 </nav>
@@ -85,59 +118,67 @@ scroll-behavior: smooth;
 </header>
 <main class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h2 class="text-3xl font-bold text-center mb-12 text-custom; color:white">Technology Domains</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="flex justify-center">
+    <div class="grid grid-cols-1 md:grid-cols-[300px_300px_300px] lg:grid-cols-[300px_300px_300px] gap-2">
         <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
         <a href="/robotics">
 
-        <i class="fas fa-robot text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+        <i class="fas fa-robot text-3xl text-custom mb-3 block text-center" style="color: antiquewhite;"></i>
             <h3 class="text-lg font-semibold mb-2; color:white">Robotics Section</h3>
             <p class="text-gray-400 text-sm">Advanced robotics solutions and automation systems</p>
         </a>
         </div>
         
         <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
-            <i class="fas fa-network-wired text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+            <i class="fas fa-network-wired text-3xl text-custom mb-3 block text-center" style="color: antiquewhite;"></i>
             <h3 class="text-lg font-semibold mb-2">IOT Section</h3>
             <p class="text-gray-400 text-sm">Connected devices and smart infrastructure</p>
         </div>
         
         <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
-            <i class="fas fa-industry text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+            <i class="fas fa-industry text-3xl text-custom mb-3 block text-center" style="color: antiquewhite;"></i>
             <h3 class="text-lg font-semibold mb-2">Industrial Automation</h3>
             <p class="text-gray-400 text-sm">Smart manufacturing and process control</p>
         </div>
         
         <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
-            <i class="fas fa-heartbeat text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+            <i class="fas fa-heartbeat text-3xl text-custom mb-3 block text-center" style="color: antiquewhite;"></i>
             <h3 class="text-lg font-semibold mb-2">Healthcare Section</h3>
             <p class="text-gray-400 text-sm">Medical technology and healthcare solutions</p>
         </div>
         
         <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
-            <i class="fas fa-shield-alt text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+            <i class="fas fa-shield-alt text-3xl text-custom mb-3 block text-center" style="color: antiquewhite;"></i>
             <h3 class="text-lg font-semibold mb-2">Defense &amp; Security</h3>
             <p class="text-gray-400 text-sm">Advanced security and defense systems</p>
         </div>
         
         <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
-            <i class="fas fa-plane text-3xl text-custom mb-4 vblock text-center" style="color: antiquewhite;"></i>
+            <i class="fas fa-plane text-3xl text-custom mb-3 vblock text-center" style="color: antiquewhite;"></i>
             <h3 class="text-lg font-semibold mb-2">Aerospace &amp; Drones</h3>
             <p class="text-gray-400 text-sm">Aviation technology and drone systems</p>
         </div>
         
         <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
-            <i class="fas fa-brain text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+            <i class="fas fa-brain text-3xl text-custom mb-3 block text-center" style="color: antiquewhite;"></i>
             <h3 class="text-lg font-semibold mb-2">AI &amp; Machine Learning</h3>
             <p class="text-gray-400 text-sm">Intelligent systems and data analytics</p>
         </div>
         
         <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
-            <i class="fas fa-cogs text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+            <i class="fas fa-cogs text-3xl text-custom mb-3 block text-center" style="color: antiquewhite;"></i>
             <h3 class="text-lg font-semibold mb-2">Mechanical Section</h3>
             <p class="text-gray-400 text-sm">Precision engineering and mechanisms</p>
         </div>
-</div>
+
+        <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
+            <i class="fas fa-user-shield text-3xl text-custom mb-3 block text-center" style="color: antiquewhite;"></i>
+            <h3 class="text-lg font-semibold mb-2">Cybersecurity &amp; Blockchain</h3>
+            <p class="text-gray-400 text-sm">Secure systems, encryption, and decentralized technologies</p>
+        </div>
+    </div>
+    </div>
+
 <div class="text-center mt-8 mb-8">
     <button class="bg-custom text-white px-6 py-3 rounded-button hover:bg-custom/90 transition-colors">
         Explore More Domains <i class="fas fa-arrow-right ml-2"></i>

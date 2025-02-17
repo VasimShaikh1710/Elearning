@@ -126,6 +126,31 @@
         .model-buttons button:hover {
             background: #005bb5;
         }
+        .ad-placement {
+            position: fixed;
+            width: 15vw;
+            height: 60vh;
+            background-color: rgba(31, 41, 55, 0.9);
+            backdrop-filter: blur(10px);
+            border: 2px solid #374151;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            transition: transform 0.2s ease-out;
+        }
+        
+        .ad-left {
+            left: 0;  /* Stick to the left */
+            top: 30%;
+            
+        }
+        
+        .ad-right {
+            right: 0; /* Stick to the right */
+            top: 30%;
+        }
 
         
 
@@ -218,6 +243,12 @@
                 </ul>
                 </div>
         </section>
+        <!-- Left Ad Placement -->
+        <div class="ad-placement ad-left">Ad Placement</div>
+
+        <!-- Right Ad Placement -->
+        <div class="ad-placement ad-right">Ad Placement</div>
+
 
         <section class="content-box">
             <h2 class="section-title">Otto Video Lecture</h2>
