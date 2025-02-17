@@ -80,12 +80,15 @@
             width: 300px;
             border-radius: 8px;
         }
+
         .video-container {
-            width: 100%;
-            height: 400px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures content inside stays within the bounds */
+}
+
         iframe {
             width: 100%;
             height: 100%;
@@ -186,6 +189,8 @@
     height: auto;
 }
 
+
+
     </style>
 </head>
 <body>
@@ -217,9 +222,19 @@
         <section class="content-box">
             <h2 class="section-title">Otto Video Lecture</h2>
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/17qe7c9zbNkcvHWnQPXCcB179ZeqUeUDg/preview" width="640" height="480" allow="autoplay"></iframe>
+                <iframe id="videoIframe" src="https://drive.google.com/file/d/17qe7c9zbNkcvHWnQPXCcB179ZeqUeUDg/preview" 
+                        width="100%" height="400" allow="autoplay" id="videoPlayer"></iframe>
+        
+                <!-- Blur Overlay with Lock Icon -->
+                <div class="blur-overlay" id="blurOverlay4">
+                    <p class="locked-text">Unlock Full Video</p>
+                    <button class="unlock-btn" onclick="unlockVideo()">Unlock</button>
+                </div>
             </div>
         </section>
+        
+
+        
 
 
         <!-- Comprehensive Guide Section -->
@@ -377,6 +392,36 @@ function unlockReport() {
 function unlockImage() {
     document.getElementById("blurOverlay3").style.display = "none"; // Hide blur & lock
 }
+
+
+
+// Play video initially
+// Function to play video initially and lock after 10 seconds
+window.onload = function() {
+    var iframe = document.getElementById("videoIframe");
+    var blurOverlay = document.getElementById("blurOverlay4");
+
+    // Initially, blur effect and lock are hidden
+    blurOverlay.style.display = "none";
+
+    // Set timeout to lock the video after 10 seconds
+    setTimeout(function() {
+        blurOverlay.style.display = "flex"; // Show lock overlay
+        iframe.src = iframe.src; // Reload iframe to pause the video
+    }, 10000); // 10 seconds delay before lock
+};
+
+// Unlock the video when the button is clicked
+function unlockVideo() {
+    var iframe = document.getElementById("videoIframe");
+    var blurOverlay = document.getElementById("blurOverlay4");
+
+    blurOverlay.style.display = "none"; // Hide blur overlay
+
+    // Restart the video by resetting the iframe source
+    iframe.src = iframe.src;
+}
+
 
 
     </script>
