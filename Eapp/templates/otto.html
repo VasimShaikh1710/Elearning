@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Navigation -->
+    <nav class="bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="https://www.phntechnology.com/">
+                    <img src="{% static 'images/logo.jpg' %}" alt="PHN Logo" class="h-8 w-auto">
+                    </a>
+                    <span class="ml-2 text-white font-medium">PHN Technology</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="demo.html" class="text-gray-300 hover:text-white transition">Home</a>
+                    <a href="demo.html" class="text-gray-300 hover:text-white transition">About</a>
+                    <a href="demo.html" class="text-gray-300 hover:text-white transition">Services</a>
+                    <a href="NA.html" class="text-gray-300 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+    
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .circuit-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10h80v80h-80z' fill='none' stroke='%23ffffff10' stroke-width='1'/%3E%3C/svg%3E");
+            animation: circuit-move 60s linear infinite;
+        }
+        @keyframes circuit-move {
+            from { background-position: 0 0; }
+            to { background-position: 100% 100%; }
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+        .logo {
+            margin-left: 20px;
+            height: 50px;
+        }
+        .content-box {
+            background: #0e0e0e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif; /* Change to any font */
+        }
+        .section-title {
+            color: #fdfdfd;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .otto-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .otto-info img {
+            width: 300px;
+            border-radius: 8px;
+        }
+        .video-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        #stl-viewer {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .model-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .model-buttons button {
+            padding: 10px;
+            border: none;
+            background: #0077ff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .model-buttons button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #1766b6; padding: 20px; text-align: center; border-bottom: 2px solid #ddd;">
+        <h1 style="font-weight: bold; font-size: 32px; margin: 0;">Otto - DIY Robot</h1>
+    </header>
+    
+    <body class="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 min-h-screen">
+        <div class="circuit-bg">
+    <div class="container">
+        <!-- Otto Introduction Section -->
+        <section class="content-box">
+            <h2 class="section-title">Meet Otto - Your DIY Robot</h2>
+            <div class="otto-info">
+                <img src="{% static 'images/Otto.png' %}" alt="Otto Robot">
+                <ul style="color: antiquewhite; padding-left: 20px;">
+                    <li>🤖  <strong>Build It Yourself:</strong> Otto is a DIY (Do-It-Yourself) robot that you can assemble step by step.</li>
+                    <li>🤖  <strong>Customizable Design:</strong> You can 3D print Otto’s parts in different colors and shapes.</li>
+                    <li>🤖  <strong>Easy to Code:</strong> Otto can be programmed using simple block-based coding (Scratch) or text-based coding (Arduino).</li>
+                    <li>🤖 <strong>Moves Like a Human:</strong> Otto can walk, turn, dance, and even shake!</li>
+                    <li>🤖  <strong>Makes Sounds & Shows Emotions:</strong> It has a speaker to play sounds and express feelings.</li>
+                    <li>🤖  <strong>Wireless Control:</strong> You can control Otto with an app using Bluetooth.</li>
+                    <li>🤖  <strong>Rechargeable Battery:</strong> Otto runs on a small battery that you can recharge with a USB cable.</li>
+                    <li>🤖  <strong>Great for Learning:</strong> Perfect for kids, beginners, and students to explore STEM (Science, Technology, Engineering, and Math) in a fun way!</li>
+                </ul>
+                </div>
+        </section>
+
+        <section class="content-box">
+            <h2 class="section-title">Otto Video Lecture</h2>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/17qe7c9zbNkcvHWnQPXCcB179ZeqUeUDg/preview" width="640" height="480" allow="autoplay"></iframe>
+            </div>
+        </section>
+
+
+        <!-- Comprehensive Guide Section -->
+        <section class="content-box">
+            <h2 class="section-title">Comprehensive Guide</h2>
+            <p style="color: antiquewhite;">This guide covers the step-by-step process to build, assemble, and program Otto. It includes schematics, 3D printing details, and coding instructions to bring your Otto robot to life.</p>
+            <div style="width: 100%; height: 800px; overflow: hidden; align-self: center;">
+                <iframe src="{% static 'images/OTTO-Robot-A-Comprehensive-Guide.pdf' %}" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </section>
+
+        <!-- Otto Report Section -->
+        <section class="content-box">
+            <h2 class="section-title">Otto Robot Report</h2>
+            <div style="width: 100%; height: 800px; overflow: hidden;">
+                <iframe src="{% static 'images/OTTO ROBOT REPORT.pdf' %}" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </section>
+
+        <!-- Otto Interface Diagram Section -->
+        <section class="content-box">
+            <h2 class="section-title">Otto Interface Diagram</h2>
+            <img src="{% static 'images/OTTO Interfacing Diagram.jpeg' %}" style="max-width: 100%; height: auto; align-items: center;">
+        </section>
+
+        <!-- 3D Model Viewer Section -->
+        <section class="content-box">
+            <h2 class="section-title">3D Model Viewer</h2>
+            <p style="color: antiquewhite;">Explore the 3D printable components of Otto Robot.</p>
+            <div class="model-buttons">
+                <button onclick="loadModel('Head')">Head</button>
+                <button onclick="loadModel('Body')">Body</button>
+                <button onclick="loadModel('Left_Foot')">Left Foot</button>
+                <button onclick="loadModel('Right_Foot')">Right Foot</button>
+                <button onclick="loadModel('Leg')">Leg</button>
+            </div>
+            <div id="stl-viewer"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 PHN Technology. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modelUrls = {
+    "Head": "https://raw.githubusercontent.com/TusharChede/3dmodels/main/Head.stl",
+    "Body": "https://raw.githubusercontent.com/TusharChede/3dmodels/main/Body.stl",
+    "Left_Foot": "https://raw.githubusercontent.com/TusharChede/3dmodels/main/Left_Foot.stl",
+    "Right_Foot": "https://raw.githubusercontent.com/TusharChede/3dmodels/main/Right_Foot.stl",
+    "Leg": "https://raw.githubusercontent.com/TusharChede/3dmodels/main/Leg.stl"
+};
+
+
+            const container = document.getElementById("stl-viewer");
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+
+            const light = new THREE.DirectionalLight(0xffffff, 1);
+            light.position.set(1, 1, 1).normalize();
+            scene.add(light);
+
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.minDistance = 1;
+            controls.maxDistance = 20;
+
+            const loader = new THREE.STLLoader();
+            let currentMesh = null;
+
+            function loadModel(part) {
+                if (currentMesh) {
+                    scene.remove(currentMesh);
+                }
+                loader.load(modelUrls[part], function (geometry) {
+                    const material = new THREE.MeshStandardMaterial({ color: 0x0077ff, metalness: 0.3, roughness: 0.6 });
+                    currentMesh = new THREE.Mesh(geometry, material);
+                    scene.add(currentMesh);
+
+                    const center = new THREE.Box3().setFromObject(currentMesh).getCenter(new THREE.Vector3());
+                    currentMesh.position.sub(center);
+                    camera.position.set(0, 0, 5);
+                });
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+                controls.update();
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            window.addEventListener("resize", function () {
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(container.clientWidth, container.clientHeight);
+            });
+
+            // Load the default model (Head) on page load
+            loadModel("Head");
+        });
+    </script>
+</body>
+</html>

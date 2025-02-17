@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - PHN Technology</title>
+  <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="https://media.cakeresume.com/image/upload/s--xI61hW6Q--/c_pad,fl_png8,h_400,w_400/v1694111291/v8ocan12jgvaljj1cent.png" alt="Logo">
+      </div>
+      <h1>PHN Technology</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="#cart">Cart</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="cart" class="cart-section">
+    <div class="container">
+      <h2>Your Cart</h2>
+      <p class="empty-cart">Your cart is empty.</p>
+      <a href="index.html" class="btn">Continue Shopping</a>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 PHN Technology. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

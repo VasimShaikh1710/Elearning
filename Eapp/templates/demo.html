@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    {% load static %}
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PHN Technology - Advanced Robotics &amp; Technology Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+  <style>
+      .circuit-bg {
+          background-image: url("{% static 'images/hometechbackground.jpeg' %}");
+      }
+      .domain-card:hover {
+          box-shadow: 0 0 15px rgba(66,153,225,0.3);
+          transform: translateY(-2px);
+          transition: all 0.3s ease;
+      }
+      .search-bar {
+          background: rgba(255,255,255,0.1);
+          backdrop-filter: blur(5px);
+      }
+      @keyframes glow {
+          0% { box-shadow: 0 0 5px rgba(66,153,225,0.5); }
+          50% { box-shadow: 0 0 20px rgba(66,153,225,0.8); }
+          100% { box-shadow: 0 0 5px rgba(66,153,225,0.5); }
+      }
+      html {
+    scroll-behavior: smooth;
+}
+
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+  <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+</head>
+<body class="bg-gray-900 font-[&#39;Space_Grotesk&#39;] text-gray-100 circuit-bg min-h-screen">
+  <nav class="bg-gray-800/95 backdrop-blur-sm border-b border-blue-500/20 sticky top-0 z-50">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+              <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <a href="https://www.phntechnology.com/">
+                      <img class="h-10 w-10" src="{% static 'images/logo.jpg' %}" alt="PHN Logo"/>
+                    </a>
+                  </div>
+                  <div class="ml-4 text-xl font-bold text-custom; color: white">PHN Technology</div>
+              </div>
+              <nav>
+              <div class="hidden md:block">
+                  <div class="ml-10 flex items-baseline space-x-8">
+                      <a href="#Home" class="text-custom hover:text-custom/80 px-3 py-2 rounded-md font-medium nav-link">Home</a>
+                      <a href="#About" class="text-gray-300 hover:text-custom px-3 py-2 rounded-md font-medium nav-link">About</a>
+                      <a href="#Services" class="text-gray-300 hover:text-custom px-3 py-2 rounded-md font-medium nav-link">Services</a>
+                      <a href="#Contact" class="text-gray-300 hover:text-custom px-3 py-2 rounded-md font-medium nav-link">Contact</a>
+                  </div>
+              </div>
+            </nav>
+          </div>
+      </div>
+  </nav>
+  <header class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex items-center justify-between">
+          <div class="flex-1 max-w-xl">
+              <div class="relative">
+                  <input type="text" placeholder="Search for projects..." class="w-full pl-10 pr-4 py-2 text-gray-300 bg-gray-800/50 border border-gray-700 rounded-button focus:ring-2 focus:ring-custom focus:border-transparent search-bar"/>
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <i class="fas fa-search text-gray-400"></i>
+                  </div>
+              </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <button class="bg-gray-800 p-2 rounded-button text-gray-400 hover:text-custom">
+              <a href="/profile">
+                <i class="fas fa-user-circle text-xl"></i>
+              </a>
+            </button>
+            <button class="bg-gray-800 p-2 rounded-button text-gray-400 hover:text-custom relative">
+              <a href="/cart">
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+                <span class="absolute -top-1 -right-1 bg-custom text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+            </button>
+        </div>
+      </div>
+  </header>
+  <main class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-3xl font-bold text-center mb-12 text-custom; color:white">Technology Domains</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
+            <a href="/robotics">
+
+            <i class="fas fa-robot text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+              <h3 class="text-lg font-semibold mb-2; color:white">Robotics Section</h3>
+              <p class="text-gray-400 text-sm">Advanced robotics solutions and automation systems</p>
+            </a>
+          </div>
+          
+          <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
+              <i class="fas fa-network-wired text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+              <h3 class="text-lg font-semibold mb-2">IOT Section</h3>
+              <p class="text-gray-400 text-sm">Connected devices and smart infrastructure</p>
+          </div>
+          
+          <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
+              <i class="fas fa-industry text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+              <h3 class="text-lg font-semibold mb-2">Industrial Automation</h3>
+              <p class="text-gray-400 text-sm">Smart manufacturing and process control</p>
+          </div>
+          
+          <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
+              <i class="fas fa-heartbeat text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+              <h3 class="text-lg font-semibold mb-2">Healthcare Section</h3>
+              <p class="text-gray-400 text-sm">Medical technology and healthcare solutions</p>
+          </div>
+          
+          <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
+              <i class="fas fa-shield-alt text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+              <h3 class="text-lg font-semibold mb-2">Defense &amp; Security</h3>
+              <p class="text-gray-400 text-sm">Advanced security and defense systems</p>
+          </div>
+          
+          <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
+              <i class="fas fa-plane text-3xl text-custom mb-4 vblock text-center" style="color: antiquewhite;"></i>
+              <h3 class="text-lg font-semibold mb-2">Aerospace &amp; Drones</h3>
+              <p class="text-gray-400 text-sm">Aviation technology and drone systems</p>
+          </div>
+          
+          <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
+              <i class="fas fa-brain text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+              <h3 class="text-lg font-semibold mb-2">AI &amp; Machine Learning</h3>
+              <p class="text-gray-400 text-sm">Intelligent systems and data analytics</p>
+          </div>
+          
+          <div class="domain-card bg-gray-800/50 backdrop-blur border border-gray-700 rounded-lg p-6 hover:border-custom cursor-pointer">
+              <i class="fas fa-cogs text-3xl text-custom mb-4 block text-center" style="color: antiquewhite;"></i>
+              <h3 class="text-lg font-semibold mb-2">Mechanical Section</h3>
+              <p class="text-gray-400 text-sm">Precision engineering and mechanisms</p>
+          </div>
+      </div>
+      <div class="text-center mt-8 mb-8">
+          <button class="bg-custom text-white px-6 py-3 rounded-button hover:bg-custom/90 transition-colors">
+              Explore More Domains <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+      </div>
+  </main>
+
+  
+  <footer class="bg-gray-800/95 border-t border-blue-500/20 mt-12">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <section id="About">
+              <div>
+                  <h3 class="text-lg font-semibold mb-4">About PHN Technology</h3>
+                  <p class="text-gray-400 text-sm">Leading provider of advanced technology solutions and robotics systems.</p>
+              </div>
+            </section>
+
+              <section id="Services">
+              <div>
+                  <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                  <ul class="space-y-2 text-gray-400 text-sm">
+                      <li><a href="#" class="hover:text-custom">Products</a></li>
+                      <li><a href="#" class="hover:text-custom">Services</a></li>
+                      <li><a href="#" class="hover:text-custom">Solutions</a></li>
+                  </ul>
+              </div>
+            </section>
+
+              <section id="Contact">
+              <div>
+                  <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                  <ul class="space-y-2 text-gray-400 text-sm">
+                      <li><i class="fas fa-envelope mr-2"></i>info@phn-tech.com</li>
+                      <li><i class="fas fa-phone mr-2"></i> +91 9876543210</li>
+                  </ul>
+              </div>
+            </section>
+
+
+              <div>
+                  <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                  <div class="flex space-x-4">
+                      <a href="#" class="text-gray-400 hover:text-custom"><i class="fab fa-twitter text-xl"></i></a>
+                      <a href="#" class="text-gray-400 hover:text-custom"><i class="fab fa-linkedin text-xl"></i></a>
+                      <a href="#" class="text-gray-400 hover:text-custom"><i class="fab fa-github text-xl"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+              © 2024 PHN Technology. All rights reserved.
+          </div>
+      </div>
+  </footer>
