@@ -24,3 +24,6 @@ def cart(request):
     return render(request, 'cart.html')
 
 
+
+def aa(request): 
+    pass
