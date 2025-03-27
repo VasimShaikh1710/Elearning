@@ -17,6 +17,9 @@ def otto(request):
 def profile(request): 
     return render(request, 'profile.html')
 
+# def cart(request): 
+#     return render(request, 'cart.html')
+
 def cart(request): 
     return render(request, 'cart.html')
 
